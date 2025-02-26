@@ -77,3 +77,33 @@ function reverseArray(arr) {
 // Example usage:
 const reversedNumbers = reverseArray(numbers);
 console.log(`The reversed array is: ${reversedNumbers}`); // Output: The reversed array is: [1, 8, 2, 7, 5, 3]
+
+// Qustion 6: Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+
+// Solution: 
+const nums = [1, 2, 2, 3, 1, 2, 4, 5, 4, 2, 6];
+
+// Create a new Set from the array to automatically remove duplicates
+const uniqueNumsSet = new Set(nums);
+
+// Convert the Set back to an array using the spread operator
+const uniqueNumsArray = [...uniqueNumsSet];
+
+// Output the array with duplicates removed
+console.log(uniqueNumsArray);
+
+// Qustion 7: Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+
+// Solution: 
+const data = ["apple","banana","apple", "banana", "egg"];
+
+// Create a new Set from the array to automatically remove duplicates
+const uniqueNumsSet = new Set(data);
+
+// Convert the Set back to an array using the spread operator
+const uniqueNumsArray = [...uniqueNumsSet];
+
+// Output the array with duplicates removed
+console.log(uniqueNumsArray);
+
+
