@@ -139,6 +139,36 @@ const numbers = [3, 5, 7, 2, 8, 1];
 const secondLargestNumber = findSecondLargest(numbers);
 console.log(`The second largest number is: ${secondLargestNumber}`);
 
+// Question 10: Find the longest substring of unique characters in an array of strings
+
+
+function longestUniqueSubstring(arr) {
+    let longest = "";
+
+    arr.forEach(str => {
+        let uniqueChars = new Set();
+        let currentSubstring = "";
+
+        for (let char of str) {
+            if (!uniqueChars.has(char)) {
+                uniqueChars.add(char);
+                currentSubstring += char;
+            } else {
+                break;
+            }
+        }
+
+        if (currentSubstring.length > longest.length) {
+            longest = currentSubstring;
+        }
+    });
+
+    return longest;
+}
+
+let arr = ["abc", "aaa", "abcdef", "zxyzz"];
+console.log(longestUniqueSubstring(arr))
+
 
 
 
