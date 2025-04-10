@@ -168,3 +168,26 @@ function longestUniqueSubstring(arr) {
 
 let arr = ["abc", "aaa", "abcdef", "zxyzz"];
 console.log(longestUniqueSubstring(arr))
+
+// Qustion 11. Grouping Items by Property
+
+const people = [
+  { name: "Alice", age: 21 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 21 },
+  { name: "David", age: 25 },
+  { name: "Eve", age: 30 }
+];
+
+function groupByAge(arr) {
+  return arr.reduce((grouped, person) => {
+    const age = person.age;
+    if (!grouped[age]) {
+      grouped[age] = [];
+    }
+    grouped[age].push(person);
+    return grouped;
+  }, {});
+}
+
+console.log(groupByAge(people));
