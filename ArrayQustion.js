@@ -1,4 +1,3 @@
-
 // Question 1: How do you find the largest number in an array in JavaScript?
 
 // Solution:
@@ -192,6 +191,3 @@ function groupByAge(arr) {
 }
 
 console.log(groupByAge(people));
-
-
-
