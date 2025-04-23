@@ -191,9 +191,3 @@ function groupByAge(arr) {
 }
 
 console.log(groupByAge(people));
-
-
-
-
-
-
