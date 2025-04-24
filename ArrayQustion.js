@@ -191,3 +191,54 @@ function groupByAge(arr) {
 }
 
 console.log(groupByAge(people));
+
+// Qustion 12:
+
+const students = [
+  { name: "aryan", subject: "English", age: 20, address: "ahmedabad" },
+  { name: "divya", subject: "Computer", age: 19, address: "kerela" },
+  { name: "aryan", subject: "hindi", age: 18, address: "goa" }
+];
+
+// with for loop
+let resultFor = {};
+
+for (let i = 0; i < students.length; i++) {
+  const { name, subject, age, address } = students[i];
+  if (!resultFor[name]) {
+    resultFor[name] = [];
+  }
+  resultFor[name].push({ subject, age, address });
+}
+
+console.log("For loop result:", resultFor);
+
+
+// Using forEach loop
+let resultForEach = {};
+
+students.forEach(student => {
+  const { name, subject, age, address } = student;
+  if (!resultForEach[name]) {
+    resultForEach[name] = [];
+  }
+  resultForEach[name].push({ subject, age, address });
+});
+
+console.log("forEach result:", resultForEach);
+
+// Using while loop
+
+let resultWhile = {};
+let i = 0;
+
+while (i < students.length) {
+  const { name, subject, age, address } = students[i];
+  if (!resultWhile[name]) {
+    resultWhile[name] = [];
+  }
+  resultWhile[name].push({ subject, age, address });
+  i++;
+}
+
+console.log("While loop result:", resultWhile);
