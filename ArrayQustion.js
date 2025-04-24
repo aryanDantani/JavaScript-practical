@@ -242,4 +242,3 @@ while (i < students.length) {
 }
 
 console.log("While loop result:", resultWhile);
-
