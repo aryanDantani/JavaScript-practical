@@ -242,3 +242,38 @@ while (i < students.length) {
 }
 
 console.log("While loop result:", resultWhile);
+
+// qustion: 13 Write a JavaScript program that takes a word as input, splits it into characters, and prints which characters are repeated along with how many times they appear.
+
+let word = "programming";
+
+// output: Repeated characters with counts:
+// r: 2
+// g: 2
+// m: 2
+
+let word = "programming";
+
+// Step 1: Split the word into characters
+let chars = word.split("");
+
+// Step 2: Create an object to store counts
+let charCount = {};
+
+// Step 3: Count each character
+for (let char of chars) {
+  if (charCount[char]) {
+    charCount[char]++;
+  } else {
+    charCount[char] = 1;
+  }
+}
+
+// Step 4: Print repeated characters with their counts
+console.log("Repeated characters with counts:");
+for (let char in charCount) {
+  if (charCount[char] > 1) {
+    console.log(`${char}: ${charCount[char]}`);
+  }
+}
+
