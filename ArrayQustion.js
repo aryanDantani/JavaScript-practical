@@ -1,25 +1,15 @@
 // Question 1: How do you find the largest number in an array in JavaScript?
 
 // Solution:
-
 function findLargestNumber(arr) {
-    
     if (arr.length === 0) return null; // Handle empty array case
-    
     let largest = arr[0];
-    
     for (let i = 1; i < arr.length; i++) {
-        
-        if (arr[i] > largest) {
-            
-            largest = arr[i];
-            
+        if (arr[i] > largest) { 
+            largest = arr[i]; 
         }
-        
     }
-    
     return largest;
-    
 }
 
 // Example usage:
