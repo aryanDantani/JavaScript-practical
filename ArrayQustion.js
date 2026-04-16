@@ -21,14 +21,23 @@ console.log(`The largest number is: ${largestNumber}`); // Output: The largest n
 
 // Solution:
 function findSmallestNumber(arr) {
+    
     if (arr.length === 0) return null; // Handle empty array case
+    
     let smallest = arr[0];
+    
     for (let i = 1; i < arr.length; i++) {
+        
         if (arr[i] < smallest) {
+            
             smallest = arr[i];
+            
         }
+        
     }
+    
     return smallest;
+    
 }
 
 // Example usage:
