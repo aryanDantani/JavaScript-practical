@@ -1,0 +1,28 @@
+name: Daily JavaScript Topics
+
+on:
+  schedule:
+    - cron: '30 4 * * *'  # 10:00 AM IST (UTC+5:30)
+  workflow_dispatch:       # Allow manual trigger too
+
+jobs:
+  generate-topics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Generate and commit JS topics
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_topics.py
